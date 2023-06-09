@@ -1,0 +1,3 @@
+id, nombre, paterno
+301, aquiles, bailo
+302, alan, brito

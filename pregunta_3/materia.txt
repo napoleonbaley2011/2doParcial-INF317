@@ -1,0 +1,3 @@
+pensum, sigla, descripcion
+02, INF-112, circuitos
+01, INF-166, idiomas

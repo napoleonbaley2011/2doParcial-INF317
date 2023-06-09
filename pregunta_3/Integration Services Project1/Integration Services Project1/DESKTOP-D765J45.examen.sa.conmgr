@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-D765J45.examen.sa"
+  DTS:DTSID="{7752EE12-A40D-4161-975E-54D856E49729}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-D765J45;User ID=sa;Initial Catalog=examen;Persist Security Info=True;Application Name=SSIS-Integration Services Project1-{7752EE12-A40D-4161-975E-54D856E49729}DESKTOP-D765J45.examen.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfsEhgxDhvEyyVHZKqr6XSwAAAAACAAAAAAAQZgAAAAEAACAAAAB6NWuCJ5s17rl6wphR4ggLMK7ylPre0tUVnQXZDfurZgAAAAAOgAAAAAIAACAAAACO5ElfKuPFfraGu59wNbx4XYp5Q1tinKeLAjfPF9Gsc4AAAAD/Bp0NUqcV66ihCts1/+JETQ6Htm/7SZ5aBObNEhiEIH0gqknYziz7Z2hDsvNDK4HU4jGRKT5H8AZlJFGNpTZKcXzQwNfRkOvsdjZtwLKZ067Y9w2o2efOnPVLsFlsVBrlJzE6dunpyoYOSdZI4N9fJcJoxP1Jd7SmeE1aug89AUAAAAD1QuxCMDazdGaY5ox/aLfMkvh1La8ee0IWXpEkgtPK2IUcKFwZjxf7opwFz/SgbsMJpowXGrPNjv7qAKzztlN0</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

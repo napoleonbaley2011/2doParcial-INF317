@@ -1,0 +1,185 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="27277004-fb79-4824-a1e0-dadfc879012a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Ejercicio4</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>D Alumno</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="8870f9aa-9871-4f89-9a4a-85e56b169e08">
+          <ID>D Alumno</ID>
+          <Name>D Alumno</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c629e2a6-6883-4f33-b6d3-7f1d67476627">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_alumno</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Materia</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="7b4ad7ca-7750-45e1-9f90-136fe95f3954">
+          <ID>D Materia</ID>
+          <Name>D Materia</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="02d5b2ea-ceb1-4bc0-a5dc-f6de357ef628">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_materia</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Matricula</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d5b68c31-3040-4241-ad3e-8012fdcb2122">
+          <ID>D Matricula</ID>
+          <Name>D Matricula</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3fb4f61f-a8aa-4397-954c-bbceffc7ed67">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_matricula</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Nota</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="54351054-d57c-40e3-ba4f-c4e23cd500a6">
+          <ID>D Nota</ID>
+          <Name>D Nota</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="cfa7f724-233f-496f-a882-1cf038c6ec69">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_nota</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Periodo</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1cd940a1-2919-48b4-8761-45bd99d6a3b2">
+          <ID>D Periodo</ID>
+          <Name>D Periodo</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="89910b82-6cb9-4f66-a417-ed5d6d522909">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_periodo</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Profesor</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e5fa14dd-c68e-4f54-8449-1c36c54be980">
+          <ID>D Profesor</ID>
+          <Name>D Profesor</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a387bdd9-d435-4bef-87fa-576711c90dbf">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_profesor</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Turno</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9b99fc29-0be9-4a2d-91e9-0c54f95fd7fa">
+          <ID>D Turno</ID>
+          <Name>D Turno</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="3389e7b5-b980-4079-82b5-74da7e1995d1">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_turno</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>D Usuario</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="4805b24f-a656-492f-bb48-26ad5d21ac03">
+          <ID>D Usuario</ID>
+          <Name>D Usuario</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="0cc3972d-a076-4ec2-8ddd-1f9a77bf347a">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_D_usuario</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>H Estudiante</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f1cbc7bc-a796-40ec-b226-945370f39d39">
+          <ID>H Estudiante</ID>
+          <Name>H Estudiante</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="6d540774-3bea-42a3-9afb-23d67e9e586b">
+            <DataSourceViewID>DW Ejercicio4</DataSourceViewID>
+            <TableID>dbo_H_estudiante</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>

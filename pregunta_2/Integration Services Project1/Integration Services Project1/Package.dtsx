@@ -1,0 +1,1380 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/5/2022 8:59:57 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RGVNRDL"
+  DTS:CreatorName="DESKTOP-RGVNRDL\fx_66"
+  DTS:DTSID="{D977E371-8FD2-4FEF-B083-F8CF34DF2427}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5223.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{C3EC4B9D-807A-4036-9487-D0CF3DDB6A88}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{0347AC2E-6C6C-4336-B901-0D76B6C6AC3A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[alumno](&#xA;&#x9;[id] [varchar](2) NOT NULL,&#xA;&#x9;[nombre] [varchar](20) NULL,&#xA;&#x9;[apellido] [varchar](20) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{D4490CA3-D101-45BB-934D-656DCF0523B8}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'1', N'a', N'b')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'10', N'j', N'u')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'2', N'm', N's')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'3', N'c', N'k')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'4', N'd', N'o')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'5', N'e', N'p')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'6', N'f', N'q')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'7', N'g', N'r')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'8', N'h', N's')&#xA;&#xA;INSERT [dbo].[alumno] ([id], [nombre], [apellido]) VALUES (N'9', N'i', N't')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 10"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{0D87694E-5E4B-46F2-A1E4-70098FBFC817}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 10"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[persona]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[persona]&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 11"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{921326A5-4B6F-4807-B927-AE1F0F6AA73D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 11"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="&#xA;CREATE TABLE [dbo].[alumnos_correo](&#xA;&#x9;[ci] [varchar](20) NULL,&#xA;&#x9;[correo] [varchar](50) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 12"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{8872C5DA-FCF9-4DD1-858D-FB4F424C8800}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 12"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'12572041', N'aguila.adartse5@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'9153405', N'luisangelaguilarfli@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'10954401', N'gerson10107@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'9915060', N'alejandroaguirremamani@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'12575042', N'alanezkevin10@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'13796926', N'angelalanoca24@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'10065864', N'alberto.10065864@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'12604362', N'aangel.alejo360@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'11106028', N'rafael33ledezma@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'9223917', N'maycol1414es@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'6847601', N'alvarezluan796@gmail.com')&#xA;&#xA;INSERT [dbo].[alumnos_correo] ([ci], [correo]) VALUES (N'10910454', N'brunelcaguill54@gmail.com')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 13"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{046B4F8A-AC4E-4745-BBAB-6F05ED027B72}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 13"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="&#xA;CREATE TABLE [dbo].[alumnos_par](&#xA;&#x9;[ci] [varchar](20) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 14"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{02546371-1B7E-40F7-BC57-8842A85400B1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 14"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'9915060')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'10910454')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'9113089')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'10901813')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'6986347')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'9101117')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'9134517')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'9927752')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'8468541')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'8295762')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'12423877')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'8444723')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'10060941')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'12798602')&#xA;&#xA;INSERT [dbo].[alumnos_par] ([ci]) VALUES (N'6946812')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 15"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{EBF7F540-C227-4F8B-AF6C-F953D6601AA3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 15"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[docente](&#xA;&#x9;[id] [varchar](2) NOT NULL,&#xA;&#x9;[nombre] [varchar](20) NULL,&#xA;&#x9;[apellido] [varchar](20) NULL &#xA;)ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 16"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{01E4332A-258B-4758-B760-98847CE9FCDD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 16"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'1', N'z', N'f')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'10', N'ew', N'k')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'2', N'm', N's')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'3', N'a', N'b')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'4', N'x', N'h')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'5', N'w', N't')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'6', N'y', N'y')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'7', N'q', N'u')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'8', N'u', N'u')&#xA;&#xA;INSERT [dbo].[docente] ([id], [nombre], [apellido]) VALUES (N'9', N't', N'k')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 17"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{7E22B31F-1261-4AF6-AB82-22646AE90CCF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 17"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[materias](&#xA;&#x9;[pensum] [varchar](2) NULL,&#xA;&#x9;[sigla] [varchar](7) NOT NULL,&#xA;&#x9;[descripcion] [varchar](30) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 18"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{CEEA4D26-A4F9-4306-A7BE-D60C92832DD1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 18"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'02', N'INF-111', N'Programacion I')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'02', N'INF-121', N'Programacion II')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'02', N'INF-161', N'base de datos')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'02', N'LAB-111', N'Lab.Programacion I')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'01', N'LAB-121', N'Lab programacion II')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'02', N'MAT-114', N'Algebra I')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'01', N'MAT-115', N'calculo I')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'01', N'MAT-120', N'Programacion I')&#xA;&#xA;INSERT [dbo].[materias] ([pensum], [sigla], [descripcion]) VALUES (N'01', N'MAT-270', N'Programacion II')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 19"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{525DD3ED-286C-4177-95A9-6162EFA7B746}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 19"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="6">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[nombre](&#xA;&#x9;[m1] [int] NULL,&#xA;&#x9;[a2] [int] NULL,&#xA;&#x9;[r3] [int] NULL,&#xA;&#x9;[t4] [int] NULL,&#xA;&#x9;[h5] [int] NULL,&#xA;&#x9;[a6] [int] NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 2"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{DDED7D93-5738-452D-BDD2-47B1448572F3}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 2"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CA2382E9-1ABF-4247-8B1D-A2C2A643974B}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[alumno]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[alumno]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 20"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{774F5E10-F685-4948-8EA7-EAEB6B60B0B1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 20"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="6">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[nombre] ([m1], [a2], [r3], [t4], [h5], [a6]) VALUES (1, NULL, NULL, NULL, NULL, NULL)&#xA;&#xA;INSERT [dbo].[nombre] ([m1], [a2], [r3], [t4], [h5], [a6]) VALUES (NULL, 1, NULL, NULL, NULL, NULL)&#xA;&#xA;INSERT [dbo].[nombre] ([m1], [a2], [r3], [t4], [h5], [a6]) VALUES (NULL, NULL, 1, NULL, NULL, NULL)&#xA;&#xA;INSERT [dbo].[nombre] ([m1], [a2], [r3], [t4], [h5], [a6]) VALUES (NULL, NULL, NULL, 1, NULL, NULL)&#xA;&#xA;INSERT [dbo].[nombre] ([m1], [a2], [r3], [t4], [h5], [a6]) VALUES (NULL, NULL, NULL, NULL, NULL, 1)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 21"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{305F5505-3AE4-4850-81D2-32B31FF979EF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 21"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="7">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[pensum](&#xA;&#x9;[codigo] [varchar](2) NOT NULL,&#xA;&#x9;[descripcion] [varchar](50) NULL &#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 22"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{2206C4C5-3FB2-42F2-9C57-0DF5F45DD64B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 22"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="7">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[pensum] ([codigo], [descripcion]) VALUES (N'01', N'Antiguo')&#xA;&#xA;INSERT [dbo].[pensum] ([codigo], [descripcion]) VALUES (N'02', N'Nuevo')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 23"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{F72F280F-E068-4542-A5DF-D7AB1DDB0F03}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 23"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="CREATE TABLE [dbo].[persona](&#xA;&#x9;[id] [int] NULL,&#xA;&#x9;[nombre] [varchar](20) NULL,&#xA;&#x9;[paterno] [varchar](20) NULL&#xA;) ON [PRIMARY]&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 24"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{585D6FA0-2955-426C-BA50-8C787AF6811A}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 24"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (2, N'm', N's')&#xA;&#xA;INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (1, N'a', N'b')&#xA;&#xA;INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (3, N'a', N'b')&#xA;&#xA;INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (5, N'lizet', N'gandarillas')&#xA;&#xA;INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (6, N'carmela', N'calliconde')&#xA;&#xA;INSERT [dbo].[persona] ([id], [nombre], [paterno]) VALUES (7, N'alejandro', N'larico')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 3"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{462A5766-94C3-4237-95BF-F499EF905F91}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 3"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="use academico" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 4"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{A08089AA-2963-431A-A006-6B00EEA6234B}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 4"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="2">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[alumnos_correo]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[alumnos_correo]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 5"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{DEBF017A-A485-4ADC-A15F-91C2B29C5536}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 5"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[alumnos_par]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[alumnos_par]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 6"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{D608A82D-4D60-483E-B56E-90D1D486A283}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 6"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="4">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{70A8BCD3-CA25-428A-B9F5-6C06F5BB3405}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[docente]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[docente]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 7"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{24DAB3C8-BAAE-45AB-8293-82830F6F30F4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 7"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="5">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{70A8BCD3-CA25-428A-B9F5-6C06F5BB3405}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[materias]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[materias]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 8"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{71E31E7F-2BDC-4222-B8BF-9DF96D8A87D4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 8"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="6">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[nombre]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[nombre]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL 9"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{AD87B170-86B4-4482-AF55-A294EE84A9F7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL 9"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="7">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{A6DDDD2D-B4AA-4C5C-951D-CFCD7168CC1A}"
+          SQLTask:SqlStatementSource="IF EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[pensum]') AND type in (N'U'))&#xA;BEGIN&#xA;DROP TABLE [dbo].[pensum]&#xA;END&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9A6F1F7A-D0CD-4871-9FF8-38664EE17218}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Tarea Ejecutar SQL 1" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CE28039D-F99E-4214-BD01-913EDEC4242B}"
+      DTS:From="Package\Tarea Ejecutar SQL 2"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Tarea Ejecutar SQL" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{B565C9A8-83AA-42A0-B254-0C5B82DC531D}"
+      DTS:From="Package\Tarea Ejecutar SQL 4"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\Tarea Ejecutar SQL 11" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{C3441A74-1257-4D68-8494-13C820E86F84}"
+      DTS:From="Package\Tarea Ejecutar SQL 11"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\Tarea Ejecutar SQL 12" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
+      DTS:CreationName=""
+      DTS:DTSID="{35FEAA67-7415-4C7F-8AA6-0D3E46FE3BCF}"
+      DTS:From="Package\Tarea Ejecutar SQL 5"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 12"
+      DTS:To="Package\Tarea Ejecutar SQL 13" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
+      DTS:CreationName=""
+      DTS:DTSID="{4ED8B6B2-8204-4D34-A7FA-93C553AAE636}"
+      DTS:From="Package\Tarea Ejecutar SQL 13"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 13"
+      DTS:To="Package\Tarea Ejecutar SQL 14" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 14]"
+      DTS:CreationName=""
+      DTS:DTSID="{3CA0F91E-0F7D-42BF-9B44-329EF9C710C7}"
+      DTS:From="Package\Tarea Ejecutar SQL 6"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 14"
+      DTS:To="Package\Tarea Ejecutar SQL 15" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 15]"
+      DTS:CreationName=""
+      DTS:DTSID="{F582787C-4412-4A8A-8CE8-EDCC7B2A44F2}"
+      DTS:From="Package\Tarea Ejecutar SQL 15"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 15"
+      DTS:To="Package\Tarea Ejecutar SQL 16" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 16]"
+      DTS:CreationName=""
+      DTS:DTSID="{5BA95000-D85C-4F21-B4EC-F661273E48E8}"
+      DTS:From="Package\Tarea Ejecutar SQL 7"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 16"
+      DTS:To="Package\Tarea Ejecutar SQL 17" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 17]"
+      DTS:CreationName=""
+      DTS:DTSID="{8409F89D-EF0B-4DDF-820A-60C5861B92D2}"
+      DTS:From="Package\Tarea Ejecutar SQL 17"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 17"
+      DTS:To="Package\Tarea Ejecutar SQL 18" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 18]"
+      DTS:CreationName=""
+      DTS:DTSID="{70DD8B66-02C9-4EB3-AFB5-2270AAD5CB0D}"
+      DTS:From="Package\Tarea Ejecutar SQL 8"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 18"
+      DTS:To="Package\Tarea Ejecutar SQL 19" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 19]"
+      DTS:CreationName=""
+      DTS:DTSID="{12248E3D-05E6-4248-AF85-E7CC1265476B}"
+      DTS:From="Package\Tarea Ejecutar SQL 19"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 19"
+      DTS:To="Package\Tarea Ejecutar SQL 20" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D9760118-17C2-421B-B570-449FDEDCCF53}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Tarea Ejecutar SQL 2" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 20]"
+      DTS:CreationName=""
+      DTS:DTSID="{237E8357-C842-4636-A407-9A46D02E5F66}"
+      DTS:From="Package\Tarea Ejecutar SQL 9"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 20"
+      DTS:To="Package\Tarea Ejecutar SQL 21" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 21]"
+      DTS:CreationName=""
+      DTS:DTSID="{6AB3A572-0F96-4B3A-A066-DD1807830E18}"
+      DTS:From="Package\Tarea Ejecutar SQL 21"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 21"
+      DTS:To="Package\Tarea Ejecutar SQL 22" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 22]"
+      DTS:CreationName=""
+      DTS:DTSID="{6D34E029-8FAA-4CB4-ADA8-E34B30491528}"
+      DTS:From="Package\Tarea Ejecutar SQL 10"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 22"
+      DTS:To="Package\Tarea Ejecutar SQL 23" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 23]"
+      DTS:CreationName=""
+      DTS:DTSID="{A2245D07-DE59-4B69-92C8-CED762C9A2C8}"
+      DTS:From="Package\Tarea Ejecutar SQL 23"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 23"
+      DTS:To="Package\Tarea Ejecutar SQL 24" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{F6CECBBC-6F5D-4929-9096-A065D2F24AC6}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Tarea Ejecutar SQL 4" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{D69B66FB-443A-4F1A-81E6-7958D0DA897A}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Tarea Ejecutar SQL 5" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{1A5B60A8-8B46-406F-8D83-EB487F6717E8}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Tarea Ejecutar SQL 6" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{2C1EE388-2189-4367-8BCC-1FA41A1C283D}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Tarea Ejecutar SQL 7" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{D949AD19-74E3-4299-9942-D8EF3B75193E}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Tarea Ejecutar SQL 8" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{86652221-76E5-4C9D-9B8B-2BF4933A45E6}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Tarea Ejecutar SQL 9" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{591F4F7C-8C5F-41AB-BDE6-46EA3099203F}"
+      DTS:From="Package\Tarea Ejecutar SQL 3"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Tarea Ejecutar SQL 10" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="42,203.5" />
+        <NodeLayout
+          Size="185,43"
+          Id="Package\Tarea Ejecutar SQL 1"
+          TopLeft="37,275.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 10"
+          TopLeft="1432.5,137.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 11"
+          TopLeft="234.545454545455,200.909090909091" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 12"
+          TopLeft="233.636363636364,274.545454545455" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 13"
+          TopLeft="437.272727272727,200.909090909091" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 14"
+          TopLeft="433.636363636364,276.363636363636" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 15"
+          TopLeft="633.636363636364,201.818181818182" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 16"
+          TopLeft="628.181818181818,284.545454545455" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 17"
+          TopLeft="826.363636363636,211.818181818182" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 18"
+          TopLeft="830,286.363636363636" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 19"
+          TopLeft="1027.27272727273,214.545454545455" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 2"
+          TopLeft="40,126.5" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 20"
+          TopLeft="1031.81818181818,285.545454545455" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 21"
+          TopLeft="1227.27272727273,216.363636363636" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 22"
+          TopLeft="1231.81818181818,291.818181818182" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 23"
+          TopLeft="1430,214.545454545455" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\Tarea Ejecutar SQL 24"
+          TopLeft="1431.81818181818,294.545454545455" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 3"
+          TopLeft="745,18.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 4"
+          TopLeft="244,128.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 5"
+          TopLeft="440,132.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 6"
+          TopLeft="635,135.833333333333" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 7"
+          TopLeft="832.575757575758,136.287878787879" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 8"
+          TopLeft="1030,137.5" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Ejecutar SQL 9"
+          TopLeft="1225,135" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="129.75,245.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30"
+              Start="0,0"
+              End="0,22.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="131.25,168.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="333.272727272727,170.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.4090909090909"
+              Start="0,0"
+              End="0,22.9090909090909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9090909090909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="329.590909090909,242.909090909091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31.6363636363636"
+              Start="0,0"
+              End="0,24.1363636363636">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1363636363636" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 12]"
+          TopLeft="532.636363636364,174.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.4090909090909"
+              Start="0,0"
+              End="0,18.9090909090909">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.9090909090909" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 13]"
+          TopLeft="530.954545454545,242.909090909091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.4545454545455"
+              Start="0,0"
+              End="0,25.9545454545455">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9545454545455" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="728.318181818182,177.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23.9848484848485"
+              Start="0,0"
+              End="0,16.4848484848485">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4848484848485" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 15]"
+          TopLeft="726.409090909091,243.818181818182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.7272727272727"
+              Start="0,0"
+              End="0,33.2272727272727">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.2272727272727" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 16]"
+          TopLeft="923.469696969697,178.287878787879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.5303030303029"
+              Start="0,0"
+              End="0,26.0303030303029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.0303030303029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 17]"
+          TopLeft="923.681818181818,253.818181818182">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.5454545454546"
+              Start="0,0"
+              End="0,25.0454545454546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.0454545454546" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 18]"
+          TopLeft="1122.63636363636,179.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.0454545454545"
+              Start="0,0"
+              End="0,27.5454545454545">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5454545454545" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 19]"
+          TopLeft="1125.04545454545,256.545454545455">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.0000000000001"
+              Start="0,0"
+              End="0,21.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="808,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-675.5,66"
+              Start="0,0"
+              End="-675.5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.7395498392283" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.7395498392283"
+                    Point2="0,26.7395498392283"
+                    Point3="-4,26.7395498392283" />
+                  <mssgle:LineSegment
+                    End="-671.5,26.7395498392283" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-671.5,26.7395498392283"
+                    Point2="-675.5,26.7395498392283"
+                    Point3="-675.5,30.7395498392283" />
+                  <mssgle:LineSegment
+                    End="-675.5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 20]"
+          TopLeft="1320.13636363636,177">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.3636363636363"
+              Start="0,0"
+              End="0,31.8636363636363">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.8636363636363" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="1325.04545454545,258.363636363636">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.4545454545454"
+              Start="0,0"
+              End="0,25.9545454545454">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9545454545454" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 22]"
+          TopLeft="1526.75,179.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.0454545454546"
+              Start="0,0"
+              End="0,27.5454545454546">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5454545454546" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 23]"
+          TopLeft="1526.40909090909,256.545454545455">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9999999999999"
+              Start="0,0"
+              End="0,30.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="867,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-530.5,68"
+              Start="0,0"
+              End="-530.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5498392282958" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5498392282958"
+                    Point2="0,27.5498392282958"
+                    Point3="-4,27.5498392282958" />
+                  <mssgle:LineSegment
+                    End="-526.5,27.5498392282958" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-526.5,27.5498392282958"
+                    Point2="-530.5,27.5498392282958"
+                    Point3="-530.5,31.5498392282958" />
+                  <mssgle:LineSegment
+                    End="-530.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="881.75,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-349.25,72"
+              Start="0,0"
+              End="-349.25,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.6820603907638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.6820603907638"
+                    Point2="0,24.6820603907638"
+                    Point3="-4,24.6820603907638" />
+                  <mssgle:LineSegment
+                    End="-345.25,24.6820603907638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-345.25,24.6820603907638"
+                    Point2="-349.25,24.6820603907638"
+                    Point3="-349.25,28.6820603907638" />
+                  <mssgle:LineSegment
+                    End="-349.25,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="890.6,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-163.1,75.3333333333333"
+              Start="0,0"
+              End="-163.1,67.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5029062421026" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5029062421026"
+                    Point2="0,22.5029062421026"
+                    Point3="-4,22.5029062421026" />
+                  <mssgle:LineSegment
+                    End="-159.1,22.5029062421026" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-159.1,22.5029062421026"
+                    Point2="-163.1,22.5029062421026"
+                    Point3="-163.1,26.5029062421026" />
+                  <mssgle:LineSegment
+                    End="-163.1,67.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="847.333333333333,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.7424242424244,75.7878787878788"
+              Start="0,0"
+              End="77.7424242424244,68.2878787878788">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7666868494652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7666868494652"
+                    Point2="0,35.7666868494652"
+                    Point3="4,35.7666868494652" />
+                  <mssgle:LineSegment
+                    End="73.7424242424244,35.7666868494652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.7424242424244,35.7666868494652"
+                    Point2="77.7424242424244,35.7666868494652"
+                    Point3="77.7424242424244,39.7666868494652" />
+                  <mssgle:LineSegment
+                    End="77.7424242424244,68.2878787878788" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="900.714285714286,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221.785714285714,77"
+              Start="0,0"
+              End="221.785714285714,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.5161290322581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.5161290322581"
+                    Point2="0,18.5161290322581"
+                    Point3="4,18.5161290322581" />
+                  <mssgle:LineSegment
+                    End="217.785714285714,18.5161290322581" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217.785714285714,18.5161290322581"
+                    Point2="221.785714285714,18.5161290322581"
+                    Point3="221.785714285714,22.5161290322581" />
+                  <mssgle:LineSegment
+                    End="221.785714285714,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="903.875,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="413.625,74.5"
+              Start="0,0"
+              End="413.625,67">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.4072708113804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.4072708113804"
+                    Point2="0,16.4072708113804"
+                    Point3="4,16.4072708113804" />
+                  <mssgle:LineSegment
+                    End="409.625,16.4072708113804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="409.625,16.4072708113804"
+                    Point2="413.625,16.4072708113804"
+                    Point3="413.625,20.4072708113804" />
+                  <mssgle:LineSegment
+                    End="413.625,67" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="906.333333333333,60.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="621.666666666667,77"
+              Start="0,0"
+              End="621.666666666667,69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.687230989957" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.687230989957"
+                    Point2="0,15.687230989957"
+                    Point3="4,15.687230989957" />
+                  <mssgle:LineSegment
+                    End="617.666666666667,15.687230989957" />
+                  <mssgle:CubicBezierSegment
+                    Point1="617.666666666667,15.687230989957"
+                    Point2="621.666666666667,15.687230989957"
+                    Point3="621.666666666667,19.687230989957" />
+                  <mssgle:LineSegment
+                    End="621.666666666667,69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-D765J45.examen"
+  DTS:DTSID="{5E04CD77-7C1C-4663-B5E5-92FF24657FB6}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-D765J45;Initial Catalog=examen;Integrated Security=True;Application Name=SSIS-Integration Services Project1-{5E04CD77-7C1C-4663-B5E5-92FF24657FB6}DESKTOP-D765J45.examen;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
